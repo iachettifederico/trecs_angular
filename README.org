@@ -1,0 +1,5 @@
+* TRecs AngularJS
+
+Implementation of a TRecs player using AngularJS
+
+Do not try this at home yet ... It's just an experiment

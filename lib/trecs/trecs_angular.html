@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>TRecs Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+    <script src="trecs_angular.js"></script>
+  </head>
+  <body ng-app="TRecs">
+    <h1>TRecs Angular</h1>
+
+    <div ng-controller="PlayerController" >
+      <label>TRecs file</label>
+      <input type="file" onchange="angular.element(this).scope().fileChanged(this)" />
+
+      <pre style="border: 2px solid #898989; background-color: black; color: white;">{{ tick(clock) }}</pre>
+      
+      <h5>{{ clock }}</h5>
+      <input type="string" ng-model="time" >
+      <br>
+
+      <button ng-click="play()" class="button"       ng-show="!playing"> Play </button>
+      <button ng-click="pause()" class="button alert" ng-show="playing"> Pause </button>
+      <button ng-click="stop()" class="button alert" ng-show="playing">  Stop </button>
+      Playing audio: <b>{{ playing }}</b>
+      <hr>
+      <div style="background-color: #B35959; border 2px solid #730D0D; color:white">
+        {{error}}
+      </div>
+      <hr>
+    </div>
+    
+  </body>
+</html>
